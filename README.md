@@ -46,10 +46,84 @@ Deploy the website.
 Upload to GitHub Pages for free hosting.
 
 ## PROGRAM
+## App.css
+```
+/* App.css */
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Dual-color gradient */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
+.App {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 60%;
+  max-width: 500px;
+}
 
+```
+
+## App.js
+```
+import React, { useState } from "react";
+import "./App.css"; // For styling
+
+function App() {
+  const [input, setInput] = useState(""); // Store user input
+
+  const handleClick = (value) => {
+    setInput((prev) => prev + value);
+  };
+
+  const clearInput = () => {
+    setInput("");
+  };
+
+  const calculateResult = () => {
+    try {
+      setInput(eval(input).toString()); // Evaluate the expression
+    } catch {
+      setInput("Error");
+    }
+  };
+
+  return (
+    <div className="calculator">
+      <h2>Simple Calculator</h2>
+      <input type="text" value={input} readOnly />
+      <div className="buttons">
+        {[7, 8, 9, "/", 4, 5, 6, "*", 1, 2, 3, "-", 0, ".", "=", "+"].map((char) => (
+          <button
+            key={char}
+            onClick={() => (char === "=" ? calculateResult() : handleClick(char))}
+          >
+            {char}
+          </button>
+        ))}
+        <button className="clear" onClick={clearInput}>
+          C
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+```
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/1babad3e-add6-4602-84e2-1e6db97e5962)
 
 ## RESULT
 The program for developing a simple calculator in React.js is executed successfully.
