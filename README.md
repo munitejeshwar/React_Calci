@@ -48,27 +48,51 @@ Upload to GitHub Pages for free hosting.
 ## PROGRAM
 ## App.css
 ```
-/* App.css */
-body {
-  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Dual-color gradient */
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  font-family: Arial, sans-serif;
+.calculator {
+  width: 250px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background: #222;
+  color: white;
+  border-radius: 10px;
 }
 
-.App {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 50px;
-  border-radius: 20px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+  background: #333;
   color: white;
-  width: 60%;
-  max-width: 500px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  background: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #666;
+}
+
+.clear {
+  grid-column: span 4;
+  background: red;
 }
 
 ```
@@ -119,6 +143,7 @@ function App() {
 }
 
 export default App;
+
 
 ```
 ## OUTPUT
