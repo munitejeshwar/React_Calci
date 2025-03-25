@@ -1,6 +1,7 @@
 # Ex04 Simple Calculator - React Project
-## Date:
-
+## Date:25/03/25
+## Name: Muni Tejeshwar
+## Reg. no: 212223040102
 ## AIM
 To  develop a Simple Calculator using React.js with clean and responsive design, ensuring a smooth user experience across different screen sizes.
 
